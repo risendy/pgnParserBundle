@@ -19,7 +19,7 @@ PGN should be in string format, default tags delimiter is newline. There should 
 
 ## Installation
 ```
-composer require risendy/pgn-parser-bundle
+composer require risendy/pgn-parser
 ```
 
 ## Usage
