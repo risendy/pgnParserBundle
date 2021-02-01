@@ -25,7 +25,7 @@ composer require risendy/pgn-parser
 ## Usage
 To parse pgn string:
 ```
-$game = new ChessParser();
+$game = new Game();
 $game->parsePgn($pgn);
 ```
 To get moves in string format:
