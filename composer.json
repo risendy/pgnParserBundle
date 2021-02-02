@@ -11,18 +11,7 @@
   "require": {
     "php": "^7.2.5",
     "ext-ctype": "*",
-    "ext-iconv": "*",
-		"symfony/config": "~3.4|~4.4|~5.1",
-		"symfony/dependency-injection": "~3.4|~4.4|~5.1",
-		"symfony/event-dispatcher": "~3.4|~4.4|~5.1",
-		"symfony/form": "~3.4|~4.4|~5.1",
-		"symfony/http-foundation": "~3.4|~4.4|~5.1",
-		"symfony/http-kernel": "~3.4|~4.4|~5.1",
-		"symfony/options-resolver": "~3.4|~4.4|~5.1",
-		"symfony/security-core": "~3.4|~4.4|~5.1",
-		"symfony/translation": "~3.4|~4.4|~5.1",
-		"symfony/validator": "~3.4|~4.4|~5.1",
-		"symfony/yaml": "~3.4|~4.4|~5.1"
+    "ext-iconv": "*"
   },
   "require-dev": {
     "laminas/laminas-code": "^3.4",
