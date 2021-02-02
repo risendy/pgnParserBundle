@@ -19,13 +19,13 @@ PGN should be in string format, default tags delimiter is newline. There should 
 
 ## Installation
 ```
-composer require risendy/pgn-parser
+composer require risendy/pgn-parser-bundle
 ```
 
 ## Usage
 To parse pgn string:
 ```
-$game = new Game();
+$game = new ChessParser();
 $game->parsePgn($pgn);
 ```
 To get moves in string format:
