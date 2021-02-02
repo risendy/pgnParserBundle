@@ -16,6 +16,9 @@ class ChessParser {
 	private $moveText = '';
 	private $moveTextWithComments = '';
 	private $gameResult;
+	private $cleaner;
+	private $pgn;
+	private $extractor;
 
 	function __construct() {
 		$this->cleaner = new CleanerHelper();
@@ -133,7 +136,7 @@ class ChessParser {
 
 	public function getTagValueByName($tagKey) {
 		if (!isset($this->objectTagsArray[$tagKey])){
-			throw new \Exception("Non existent tag name", 1);
+			return NULL;
 		}
 
 		return $this->objectTagsArray[$tagKey]->getValue();
@@ -143,7 +146,7 @@ class ChessParser {
 		if ($color == 'W') {$index = 0;} else {$index = 1;}
 
 		if (!isset($this->objectMovesArray[$moveNumber])) {
-			throw new Exception("Non existent move number", 1);
+            return NULL;
 		}
 
 		return $this->objectMovesArray[$moveNumber][$index];
@@ -153,7 +156,7 @@ class ChessParser {
 		if ($color == 'W') {$index = 0;} else {$index = 1;}
 
 		if (!isset($this->objectMovesArray[1][$index])){
-			throw new \Exception("Non existent move number", 1);
+            return NULL;
 		}
 
 		return $this->objectMovesArray[1][$index]->getSan();
@@ -163,7 +166,7 @@ class ChessParser {
 		if ($color == 'W') {$index = 0;} else {$index = 1;}
 
 		if (!isset($this->objectMovesArray[sizeof($this->objectMovesArray)][$index])) {
-			throw new \Exception("Non existent move number", 1);
+            return NULL;
 		}
 
 		return $this->objectMovesArray[sizeof($this->objectMovesArray)][$index]->getSan();
